@@ -1,0 +1,165 @@
+@import "../node_modules/bootstrap/scss/functions";
+@import "../node_modules/bootstrap/scss/variables";
+@import "../node_modules/bootstrap/scss/mixins";
+@import "../node_modules/bootstrap/scss/bootstrap";
+@import "../node_modules/bootstrap/scss/reboot";
+
+$body-bg: #C2A98B !important;
+$body-color: #110E0F !important;
+$card-color: #C2A98B;
+
+$theme-colors: map-remove($theme-colors, "info", "light", "dark");
+
+$theme-colors: (
+  "primary": #472226,
+  "secondary": #8E4F37,
+  "link": #662222
+);
+
+@function theme-color($key: "primary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function theme-color($key: "secondary") {
+  @return map-get($theme-colors, $key);
+}
+
+@function theme-color($key: "link") {
+  @return map-get($theme-colors, $key);
+}
+
+@import url('https://fonts.googleapis.com/css?family=IBM+Plex+Mono|IBM+Plex+Sans|IBM+Plex+Serif|Muli&display=swap');
+
+$font-family-base: "Muli", "IBM Plex Mono", "IBM Plex Sans", "IBM Plex Serif", "Helvetica Neue", Arial, sans-serif !important;
+$btn-font-family: "IBM Plex Serif" !important;
+$btn-font-weight: 500;
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Muli";
+}
+
+h1, h2 {
+	font-weight: 700;
+	color: theme-color("primary");
+}
+
+h3, h4 {
+	font-family: "Muli";
+	font-weight: 500;
+	color: theme-color("secondary");
+}
+
+p {
+	font-family: "IBM Plex Sans";
+	font-weight: 700;
+	color: $body-color;
+}
+
+a {
+	font-family: "IBM Plex Serif";
+	font-weight: 400;
+	color: theme-color("primary");
+	text-decoration: underline;
+}
+
+a:hover {
+	font-family: "IBM Plex Serif";
+	font-weight: 400;
+	color: theme-color-level("primary", -6);
+	text-decoration: underline;
+}
+
+.mdi::before {
+    font-size: 24px;
+    line-height: 14px;
+}
+.btn .mdi::before {
+    position: relative;
+    top: 4px;
+}
+.btn-xs .mdi::before {
+    font-size: 18px;
+    top: 3px;
+}
+.btn-sm .mdi::before {
+    font-size: 18px;
+    top: 3px;
+}
+.dropdown-menu .mdi {
+    width: 18px;
+}
+.dropdown-menu .mdi::before {
+    position: relative;
+    top: 4px;
+    left: -8px;
+}
+.nav .mdi::before {
+    position: relative;
+    top: 4px;
+}
+.navbar .navbar-toggle .mdi::before {
+    position: relative;
+    top: 4px;
+    color: #FFF;
+}
+.breadcrumb .mdi::before {
+    position: relative;
+    top: 4px;
+}
+.breadcrumb a:hover {
+    text-decoration: none;
+}
+.breadcrumb a:hover span {
+    text-decoration: underline;
+}
+.alert .mdi::before {
+    position: relative;
+    top: 4px;
+    margin-right: 2px;
+}
+.input-group-addon .mdi::before {
+    position: relative;
+    top: 3px;
+}
+.navbar-brand .mdi::before {
+    position: relative;
+    top: 2px;
+    margin-right: 2px;
+}
+.list-group-item .mdi::before {
+    position: relative;
+    top: 3px;
+    left: -3px
+}
+
+.nav-link .iconify { 
+	width: 28px; 
+	height: 28px;
+	margin: 5px;
+}
+
+.profile-main .iconify {
+	width: 24px; 
+	height: 24px;
+	margin: 5px;
+}
+
+.nav-item {
+	vertical-align: center;
+}
+
+.container {
+	background-color: #E7E8EC;
+}
+
+.nav {	
+	.nav-item {
+		a {
+			text-decoration: none;
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+}
+
